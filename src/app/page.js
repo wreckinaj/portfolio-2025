@@ -1,6 +1,9 @@
 import Image from "next/image";
 import HeaderSection from "./components/HeaderSection"
 import AboutSection from "./components/AboutSection";
+import WorkSection from "./components/WorkSection";
+import ContactForm from "./components/ContactForm";
+import SocialSection from "./components/SocialSection";
 
 export default function Home() {
   return (
@@ -8,6 +11,9 @@ export default function Home() {
       <div className='container mx-auto px-12 py-4'>
         <HeaderSection/>
         <AboutSection/>
+        <WorkSection/>
+        <ContactForm/>
+        <SocialSection/>
       </div>
     </main>
   );
