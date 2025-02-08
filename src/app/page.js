@@ -4,6 +4,7 @@ import AboutSection from "./components/AboutSection";
 import WorkSection from "./components/WorkSection";
 import ContactForm from "./components/ContactForm";
 import SocialSection from "./components/SocialSection";
+import ExpSection from "./components/ExpSection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <div className='container mx-auto px-12 py-4'>
         <HeaderSection/>
         <AboutSection/>
+        <ExpSection/>
         <WorkSection/>
         <ContactForm/>
         <SocialSection/>
