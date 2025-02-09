@@ -9,15 +9,16 @@ const HeaderSection = () => {
         <section>
             <div className='grid grid-cols-1 sm:grid-cols-12'>
                 <div className='col-span-7 place-self-center text-center sm:text-left'>
-                    <h1 className='text-red-600 mb-4 sm:text-5xl text-4xl lg:text-6xl font-bold'>
+                    <h1 className='text-red-600 mb-2 sm:mb-4 sm:text-5xl text-4xl lg:text-6xl font-bold'>
                         <span className='text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-600'>
                             Hello, I'm Anthony,{' '}
                         </span>
                         <div
-                            className='inline-block overflow-hidden align-top'
+                            className='inline-block align-top'
                             style={{
-                                width: '300px', // Adjust this to match the longest text
-                                height: '1.2em', // Keeps it vertically consistent
+                                minWidth: '300px',
+                                height: '1.2em', // Default for single-line text
+                                transition: 'height 0.2s ease-in-out',
                             }}
                         >
                             <TypeAnimation
@@ -43,11 +44,16 @@ const HeaderSection = () => {
                                 ]}
                                 wrapper="span"
                                 speed={50}
+                                style={{
+                                    display: 'inline-block',
+                                    whiteSpace: 'pre-wrap',
+                                    lineHeight: '1.2',
+                                }}
                                 repeat={Infinity}
                             />
                         </div>
                     </h1>
-                    <p className='text-zinc-400 text-base sm:text-lg mb-6 lg:text-xl'>
+                    <p className='text-zinc-400 text-base sm:text-lg mb-4 lg:text-xl'>
                         Changing coding to change the world!
                     </p>
                     <div>
