@@ -5,41 +5,47 @@ import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 
 const HeaderSection = () => {
-    return(
+    return (
         <section>
             <div className='grid grid-cols-1 sm:grid-cols-12'>
                 <div className='col-span-7 place-self-center text-center sm:text-left'>
                     <h1 className='text-red-600 mb-4 sm:text-5xl text-4xl lg:text-6xl font-bold'>
                         <span className='text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-600'>
-                            Hello, I'm Anthony,
+                            Hello, I'm Anthony,{' '}
                         </span>
-                        <TypeAnimation
-                            sequence={[
-                                // Same substring at the start will only be typed out once, initially
-                                'Software Engineer.',
-                                1000,
-                                'Backend Developer.',
-                                1000, // wait 1s before replacing "Mice" with "Hamsters"
-                                'AI Fanatic.',
-                                1000,
-                                'Swimmer.',
-                                1000,
-                                'Geography Lover.',
-                                1000,
-                                'Leader.',
-                                1000,
-                                'Problem Solver.',
-                                1000,
-                                'a person on the spectrum.',
-                                1000,
-                                'willing to make a difference.',
-                                1000
-                            ]}
-                            wrapper="span"
-                            speed={50}
-                            style={{ fontSize: '1em', display: 'inline-block' }}
-                            repeat={Infinity}
-                        />
+                        <div
+                            className='inline-block overflow-hidden align-top'
+                            style={{
+                                width: '300px', // Adjust this to match the longest text
+                                height: '1.2em', // Keeps it vertically consistent
+                            }}
+                        >
+                            <TypeAnimation
+                                sequence={[
+                                    'Software Engineer.',
+                                    1000,
+                                    'Backend Developer.',
+                                    1000,
+                                    'AI Fanatic.',
+                                    1000,
+                                    'Swimmer.',
+                                    1000,
+                                    'Geography Lover.',
+                                    1000,
+                                    'Leader.',
+                                    1000,
+                                    'Problem Solver.',
+                                    1000,
+                                    'a person on the spectrum.',
+                                    1000,
+                                    'willing to make a difference.',
+                                    1000,
+                                ]}
+                                wrapper="span"
+                                speed={50}
+                                repeat={Infinity}
+                            />
+                        </div>
                     </h1>
                     <p className='text-zinc-400 text-base sm:text-lg mb-6 lg:text-xl'>
                         Changing coding to change the world!
